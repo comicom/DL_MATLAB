@@ -70,3 +70,28 @@ You can combine plot options to specify color, marker style, and line style! Gen
 
 Labels can be added to plots using plot annotation functions, such as xlabel. The input to these functions must be text, which can be enclosed in quotation marks.
 >> xlabel("Text Label for X-Axis")
+
+In the Workspace, you can see that t is a variable that contains text.
+>> title("tited")
+
+You can use the legend function with text inputs to identify the different lines of a plot. The order matters – the inputs to legend should have the same order as the order in which the lines were drawn.
+>> legend("Label1","Label2","Label3")
+
+The legend function also accepts two optional arguments: the keyword "Location" and a text description of the location, which is given by compass points, such as "north" or "southwest".
+>> legend("lbl1","lbl2","lbl3","Location","west")
+
+You can use basic TeX markup interpretation in your annotations. Hence, "x^2" becomes x2 and "x_2" becomes x2.
+
+The grid command can be used to add a grid to your plot.
+>> grid on
+>> grid minor
+>> grid off
+
+Other symbols, such as greek letters, can also be added, such as \Delta, \gamma, and \pi. Try the following code to see what happens.
+>> xlabel("\sigma \approx \pi^{-2}")
+
+Before looking at the data from the 1990's separately from the 2000's, let's extract the default limits of the graph.
+
+You can use the function axis with no inputs to get the current axes limits. For example, if the following figure is open:
+
+then the command v = axis returns a vector of 4 elements containing the x- and y-axis limits.
